@@ -1,0 +1,37 @@
+# ==============================================================================
+# CLion / JetBrains IDEs
+# ==============================================================================
+.idea/
+/shelf/
+/.idea/workspace.xml
+/httpRequests/
+/queries/
+/dataSources/
+/dataSources.local.xml
+vcs.xml
+
+# ==============================================================================
+# Build-Systeme & Kompilate (CMake & Ninja)
+# ==============================================================================
+# Ignoriert alle Build-Ordner (z.B. cmake-build-debug, cmake-build-release)
+cmake-build-*/
+
+# Ignoriert Ninja-Build-Artefakte, falls sie außerhalb des Build-Ordners landen
+*.ninja
+.ninja_deps
+.ninja_log
+
+# ==============================================================================
+# Paketmanager / Abhängigkeiten (Falls CMake sie direkt ins Projekt zieht)
+# ==============================================================================
+# Falls die Abhängigkeiten (httplib, json) fälschlicherweise im Projektordner landen:
+# httplib-src/
+# json-src/
+
+# ==============================================================================
+# Allgemeine Betriebssystem- & Log-Dateien
+# ==============================================================================
+*.log
+*.pstat
+.DS_Store
+Thumbs.db
