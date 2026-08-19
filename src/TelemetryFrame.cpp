@@ -14,13 +14,13 @@ TelemetryFrame parseTelemetryFrame(const nlohmann::json& rawJson)
         return frame;
     }
 
-    frame.gear = rawJson.value("gear %", 0);
+    frame.gear = rawJson.value("gear, %", 0);
     frame.height = rawJson.value("H, m", 0);
     frame.tas = rawJson.value("TAS, km/h", 0);
     frame.ias = rawJson.value("IAS, km/h", 0);
     frame.mach = rawJson.value("M", 0.0);
-    frame.aoa = rawJson.value("AoA", 0.0);
-    frame.throttle = rawJson.value("throttle 1", 0);
+    frame.aoa = rawJson.value("AoA, deg", 0.0);
+    frame.throttle = rawJson.value("throttle 1, %", 0);
 
     return frame;
 }
